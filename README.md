@@ -1,82 +1,42 @@
+# PalindromeCheckerApp
 
+## Use Case 2 – Hardcoded Palindrome Check
 
-\# PalindromeCheckerApp
+### Objective
 
+The objective of this use case is to verify whether a predefined (hardcoded) string is a palindrome using basic comparison logic.
 
+### Functionality
 
-\## Use Case 1 – Application Entry \& Welcome Message
+* Program starts execution using the `main()` method.
+* A hardcoded string is stored in the program.
+* Characters are compared from both ends of the string.
+* The result is displayed on the console.
 
+### Concepts Used
 
+* Java Class
+* `main()` Method
+* Static Keyword
+* String Literal
+* Conditional Statements (if–else)
+* Loop (iteration till half of string length)
+* Console Output (`System.out.println()`)
 
-\### Objective
+### Version
 
+2.0
 
-
-The goal of this use case is to display the application startup information when the program begins execution.
-
-
-
-\### Functionality
-
-
-
-\* Program starts using the `main()` method.
-
-\* Displays welcome message.
-
-\* Shows application version.
-
-\* Confirms system initialization.
-
-
-
-\### Concepts Used
-
-
-
-\* Java Class
-
-\* `main()` Method
-
-\* Static Keyword
-
-\* Console Output (`System.out.println()`)
-
-
-
-\### Version
-
-
-
-1.0
-
-
-
-\### How to Run
-
-
+### How to Run
 
 Compile:
 
-
-
 ```
-
-javac UseCase1PalindromeCheckerApp.java
-
+javac UseCase2PalindromeCheckerApp.java
 ```
-
-
 
 Run:
 
-
-
 ```
-
-java UseCase1PalindromeCheckerApp
-
+java UseCase2PalindromeCheckerApp
 ```
-
-
-
