@@ -3,7 +3,7 @@
  * MAIN CLASS - PalindromeCheckerApp
  * =====================================================
  *
- * Use Case 2 : Hardcoded Palindrome Validation
+ *
  * Use Case 3 : Reverse String Palindrome Check
  *
  * Description:
