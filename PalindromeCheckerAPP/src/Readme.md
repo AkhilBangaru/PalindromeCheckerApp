@@ -1,33 +1,28 @@
-# UC2 – Hardcoded Palindrome Check
+# UC3 – Palindrome Check Using String Reverse
 
 ## Goal
 
-Display whether a hardcoded string is a palindrome.
-
-## Actor
-
-User
+Check whether a string is a palindrome by reversing the string and comparing it with the original.
 
 ## Flow
 
-1. Program starts.
-2. A hardcoded string `"madam"` is assigned.
-3. The program checks if the string is a palindrome using the `isPalindrome()` method.
-4. The result is printed on the console.
+1. A string is assigned to a variable.
+2. The string is reversed using a loop.
+3. The reversed string is compared with the original string.
+4. The result is displayed on the console.
 
 ## Concepts Used
 
-* Class
-* Main Method
-* Static Methods
 * String
-* Loop
-* Conditional Statements
-* Console Output (`System.out.println`)
+* For Loop
+* String Concatenation
+* equals() Method
+* Console Output
 
 ## Sample Output
 
 ```
-Input text: madam
-Is it a palindrome? : true
+Input text: level
+Reversed text: level
+Result: It is a Palindrome
 ```
