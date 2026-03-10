@@ -1,26 +1,27 @@
-# UC9 – Recursive Palindrome Checker
+# UC10 – Case-Insensitive & Space-Ignored Palindrome
 
 ## Goal
 
-Check whether a string is a palindrome using recursion.
+Check whether a string is a palindrome while ignoring spaces and letter case.
 
 ## Flow
 
-1. Compare the first and last characters of the string.
-2. If they match, make a recursive call for the remaining substring.
-3. The recursion stops when the start index becomes greater than or equal to the end index.
+1. Normalize the input string by removing spaces and converting it to lowercase.
+2. Compare characters from the beginning and end of the string.
+3. If all characters match, the string is a palindrome.
 
 ## Concepts Used
 
-* Recursion
-* Base Condition
-* Call Stack
+* String Preprocessing
+* Regular Expressions
+* Case Conversion
 * Character Comparison
 * Console Output
 
 ## Sample Output
 
-```id="m8oypb"
-Input text: madam
+```id="vtqdyv"
+Original text: Madam In Eden Im Adam
+Normalized text: madaminedenimadam
 Is it a palindrome? : true
 ```
