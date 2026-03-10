@@ -1,79 +1,54 @@
-import java.util.*;
-
 public class App {
 
     public static void main(String[] args) {
 
         String input = "madam";
 
-        // Choose strategy (StackStrategy or DequeStrategy)
-        PalindromeStrategy strategy = new StackStrategy();
+        // Reverse string method
+        long start1 = System.nanoTime();
+        boolean reverseResult = reverseCheck(input);
+        long end1 = System.nanoTime();
 
-        PalindromeService service = new PalindromeService(strategy);
-
-        boolean result = service.checkPalindrome(input);
+        // Two pointer method
+        long start2 = System.nanoTime();
+        boolean pointerResult = pointerCheck(input);
+        long end2 = System.nanoTime();
 
         System.out.println("Input text: " + input);
-        System.out.println("Is it a palindrome? : " + result);
+
+        System.out.println("\nReverse Method Result: " + reverseResult);
+        System.out.println("Execution Time: " + (end1 - start1) + " ns");
+
+        System.out.println("\nTwo Pointer Method Result: " + pointerResult);
+        System.out.println("Execution Time: " + (end2 - start2) + " ns");
     }
-}
 
-// Strategy Interface
-interface PalindromeStrategy {
-    boolean check(String input);
-}
+    // Method 1: Reverse string
+    private static boolean reverseCheck(String input) {
 
-// Stack based strategy
-class StackStrategy implements PalindromeStrategy {
+        String reversed = "";
 
-    public boolean check(String input) {
-        Stack<Character> stack = new Stack<>();
-
-        for (char c : input.toCharArray()) {
-            stack.push(c);
+        for (int i = input.length() - 1; i >= 0; i--) {
+            reversed += input.charAt(i);
         }
 
-        for (char c : input.toCharArray()) {
-            if (c != stack.pop()) {
+        return input.equals(reversed);
+    }
+
+    // Method 2: Two pointer comparison
+    private static boolean pointerCheck(String input) {
+
+        int start = 0;
+        int end = input.length() - 1;
+
+        while (start < end) {
+            if (input.charAt(start) != input.charAt(end)) {
                 return false;
             }
+            start++;
+            end--;
         }
 
         return true;
-    }
-}
-
-// Deque based strategy
-class DequeStrategy implements PalindromeStrategy {
-
-    public boolean check(String input) {
-
-        Deque<Character> deque = new ArrayDeque<>();
-
-        for (char c : input.toCharArray()) {
-            deque.addLast(c);
-        }
-
-        while (deque.size() > 1) {
-            if (!deque.removeFirst().equals(deque.removeLast())) {
-                return false;
-            }
-        }
-
-        return true;
-    }
-}
-
-// Service class using strategy
-class PalindromeService {
-
-    private PalindromeStrategy strategy;
-
-    public PalindromeService(PalindromeStrategy strategy) {
-        this.strategy = strategy;
-    }
-
-    public boolean checkPalindrome(String input) {
-        return strategy.check(input);
     }
 }
