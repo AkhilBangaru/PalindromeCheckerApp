@@ -1,27 +1,30 @@
-# UC12 – Strategy Pattern for Palindrome Algorithms
+# UC13 – Performance Comparison
 
 ## Goal
 
-Use the Strategy Pattern to dynamically choose different palindrome checking algorithms.
+Compare the performance of different palindrome checking algorithms.
 
 ## Flow
 
-1. Define a `PalindromeStrategy` interface.
-2. Implement different strategies such as `StackStrategy` and `DequeStrategy`.
-3. Inject the desired strategy into `PalindromeService`.
-4. The service executes the chosen algorithm.
+1. Execute multiple palindrome algorithms.
+2. Measure execution time using `System.nanoTime()`.
+3. Display the results and compare performance.
 
 ## Concepts Used
 
-* Interface
-* Polymorphism
-* Strategy Pattern
-* Stack / Deque Data Structures
-* Object-Oriented Design
+* Algorithm Comparison
+* Execution Time Measurement
+* `System.nanoTime()`
+* String Processing
 
 ## Sample Output
 
 ```
 Input text: madam
-Is it a palindrome? : true
+
+Reverse Method Result: true
+Execution Time: 12000 ns
+
+Two Pointer Method Result: true
+Execution Time: 5000 ns
 ```
