@@ -1,47 +1,33 @@
-# Palindrome Checker Management System
+# UC2 – Hardcoded Palindrome Check
 
-## Objective
+## Goal
 
-Create a simple Java console application that checks palindromes.
-UC1 focuses on displaying the application welcome message and version when the program starts.
+Display whether a hardcoded string is a palindrome.
 
-## Use Case 1: Application Entry & Welcome Message
+## Actor
 
-**Goal:** Display the application name and version at startup.
+User
 
-**Flow:**
+## Flow
 
 1. Program starts.
-2. JVM calls the `main()` method.
-3. `displayWelcomeMessage()` prints the application name and version.
-4. System initialization message is shown.
+2. A hardcoded string `"madam"` is assigned.
+3. The program checks if the string is a palindrome using the `isPalindrome()` method.
+4. The result is printed on the console.
 
 ## Concepts Used
 
 * Class
 * Main Method
-* Static Keyword
-* Constants (`static final`)
+* Static Methods
+* String
+* Loop
+* Conditional Statements
 * Console Output (`System.out.println`)
-
-## How to Run
-
-Compile:
-
-```bash
-javac App.java
-```
-
-Run:
-
-```bash
-java App
-```
 
 ## Sample Output
 
 ```
-Welcome to the Palindrome Checker Management System
-Version : 1.0
-System initialized successfully.
+Input text: madam
+Is it a palindrome? : true
 ```
