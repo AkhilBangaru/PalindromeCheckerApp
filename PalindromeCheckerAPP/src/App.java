@@ -2,27 +2,32 @@ public class App {
 
     public static void main(String[] args) {
 
-        String input = "madam";
+        String input = "Madam In Eden Im Adam";
 
-        boolean result = isPalindrome(input, 0, input.length() - 1);
+        // Normalize string: remove spaces and convert to lowercase
+        String normalized = input.replaceAll("\\s+", "").toLowerCase();
 
-        System.out.println("Input text: " + input);
+        boolean result = isPalindrome(normalized);
+
+        System.out.println("Original text: " + input);
+        System.out.println("Normalized text: " + normalized);
         System.out.println("Is it a palindrome? : " + result);
     }
 
-    // Recursive palindrome check
-    private static boolean isPalindrome(String str, int start, int end) {
+    // Palindrome check
+    private static boolean isPalindrome(String str) {
 
-        // Base condition
-        if (start >= end) {
-            return true;
+        int start = 0;
+        int end = str.length() - 1;
+
+        while (start < end) {
+            if (str.charAt(start) != str.charAt(end)) {
+                return false;
+            }
+            start++;
+            end--;
         }
 
-        if (str.charAt(start) != str.charAt(end)) {
-            return false;
-        }
-
-        // Recursive call
-        return isPalindrome(str, start + 1, end - 1);
+        return true;
     }
 }
