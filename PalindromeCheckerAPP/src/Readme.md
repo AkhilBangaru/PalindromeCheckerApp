@@ -1,27 +1,27 @@
-# UC10 – Case-Insensitive & Space-Ignored Palindrome
+# UC11 – Object-Oriented Palindrome Service
 
 ## Goal
 
-Check whether a string is a palindrome while ignoring spaces and letter case.
+Encapsulate palindrome checking logic inside a separate class following object-oriented programming principles.
 
 ## Flow
 
-1. Normalize the input string by removing spaces and converting it to lowercase.
-2. Compare characters from the beginning and end of the string.
-3. If all characters match, the string is a palindrome.
+1. Create a `PalindromeChecker` class.
+2. Implement `checkPalindrome()` method inside the class.
+3. The `App` class creates an object of `PalindromeChecker`.
+4. The method is used to verify whether the string is a palindrome.
 
 ## Concepts Used
 
-* String Preprocessing
-* Regular Expressions
-* Case Conversion
-* Character Comparison
+* Encapsulation
+* Object-Oriented Programming
+* Class and Object
+* Method Invocation
 * Console Output
 
 ## Sample Output
 
-```id="vtqdyv"
-Original text: Madam In Eden Im Adam
-Normalized text: madaminedenimadam
+```
+Input text: madam
 Is it a palindrome? : true
 ```
