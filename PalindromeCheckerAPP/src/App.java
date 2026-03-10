@@ -1,24 +1,25 @@
+import java.util.Stack;
+
 public class App {
 
     public static void main(String[] args) {
 
         String input = "madam";
+        Stack<Character> stack = new Stack<>();
 
-        // Convert string to character array
-        char[] chars = input.toCharArray();
+        // Push characters into stack
+        for (int i = 0; i < input.length(); i++) {
+            stack.push(input.charAt(i));
+        }
 
-        int start = 0;
-        int end = chars.length - 1;
         boolean isPalindrome = true;
 
-        // Two-pointer comparison
-        while (start < end) {
-            if (chars[start] != chars[end]) {
+        // Pop characters and compare
+        for (int i = 0; i < input.length(); i++) {
+            if (input.charAt(i) != stack.pop()) {
                 isPalindrome = false;
                 break;
             }
-            start++;
-            end--;
         }
 
         System.out.println("Input text: " + input);
