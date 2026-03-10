@@ -1,54 +1,26 @@
-# UC7 – Deque Based Optimized Palindrome Checker
+# UC9 – Recursive Palindrome Checker
 
 ## Goal
 
-Check whether a string is a palindrome using a Deque data structure.
+Check whether a string is a palindrome using recursion.
 
 ## Flow
 
-1. Characters of the string are inserted into a deque.
-2. The first and last characters are removed.
-3. Both characters are compared.
-4. The process continues until the deque becomes empty or a mismatch occurs.
+1. Compare the first and last characters of the string.
+2. If they match, make a recursive call for the remaining substring.
+3. The recursion stops when the start index becomes greater than or equal to the end index.
 
 ## Concepts Used
 
-* Deque (Double Ended Queue)
-* Front and Rear Operations
-* Loop
+* Recursion
+* Base Condition
+* Call Stack
 * Character Comparison
 * Console Output
 
 ## Sample Output
 
-```# UC8 – Linked List Based Palindrome Checker
-
-## Goal
-
-Check whether a string is a palindrome using a singly linked list.
-
-## Flow
-
-1. Convert the string into a linked list.
-2. Use fast and slow pointers to find the middle of the list.
-3. Reverse the second half of the list.
-4. Compare the first half and reversed second half.
-
-## Concepts Used
-
-* Singly Linked List
-* Node Traversal
-* Fast and Slow Pointer Technique
-* Linked List Reversal
-* Console Output
-
-## Sample Output
-
-```
-Input text: madam
-Is it a palindrome? : true
-```
-
+```id="m8oypb"
 Input text: madam
 Is it a palindrome? : true
 ```
