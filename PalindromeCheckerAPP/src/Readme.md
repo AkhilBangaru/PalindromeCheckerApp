@@ -21,7 +21,34 @@ Check whether a string is a palindrome using a Deque data structure.
 
 ## Sample Output
 
+```# UC8 – Linked List Based Palindrome Checker
+
+## Goal
+
+Check whether a string is a palindrome using a singly linked list.
+
+## Flow
+
+1. Convert the string into a linked list.
+2. Use fast and slow pointers to find the middle of the list.
+3. Reverse the second half of the list.
+4. Compare the first half and reversed second half.
+
+## Concepts Used
+
+* Singly Linked List
+* Node Traversal
+* Fast and Slow Pointer Technique
+* Linked List Reversal
+* Console Output
+
+## Sample Output
+
 ```
+Input text: madam
+Is it a palindrome? : true
+```
+
 Input text: madam
 Is it a palindrome? : true
 ```
