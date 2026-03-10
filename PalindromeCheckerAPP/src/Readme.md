@@ -1,21 +1,21 @@
-# UC4 – Character Array Based Palindrome Check
+# UC5 – Stack Based Palindrome Checker
 
 ## Goal
 
-Check whether a string is a palindrome by converting it into a character array and comparing characters from both ends.
+Check whether a string is a palindrome using a stack data structure.
 
 ## Flow
 
-1. Convert the string to a character array using `toCharArray()`.
-2. Use two pointers: one from the start and one from the end.
-3. Compare characters at both positions.
-4. If all characters match, the string is a palindrome.
+1. Characters of the string are pushed into a stack.
+2. Characters are popped from the stack in reverse order.
+3. Each popped character is compared with the original string.
+4. The result is displayed on the console.
 
 ## Concepts Used
 
-* Character Array (`char[]`)
-* Array Indexing
-* Two-Pointer Technique
+* Stack
+* Push Operation
+* Pop Operation
 * Loop
 * Console Output
 
